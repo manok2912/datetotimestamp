@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date to timestamp</title>
+</head>
+<body>
+    <label>Date to Timestamp:</label><br>
+    <input type="date" id="date" name="date" onchange="convertToStamp()">
+    <hr>
+    <p id="timestamp"></p>
+    <p id="normaldate"></p>
+</body>
+<script>
+function convertToStamp (){
+    var dateinput = document.getElementById("date");
+    var timestamp = document.getElementById("timestamp");
+    var normaldate = document.getElementById("normaldate");
+    var ts = new Date(dateinput.value).getTime();
+    var nd  = new Date(ts);
+    timestamp.innerHTML = "<b>Timestamp</b> : "+ts;
+    normaldate.innerHTML = "<b>Date</b> : "+nd;
+}
+</script>
+</html>
