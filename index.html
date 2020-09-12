@@ -19,6 +19,7 @@ function convertToStamp (){
     var normaldate = document.getElementById("normaldate");
     var ts = new Date(dateinput.value).getTime();
     var nd  = new Date(ts);
+    console.log(new Date());
     timestamp.innerHTML = "<b>Timestamp</b> : "+ts;
     normaldate.innerHTML = "<b>Date</b> : "+nd;
 }
